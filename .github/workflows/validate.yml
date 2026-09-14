@@ -1,0 +1,36 @@
+name: validation until Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: install Dependencies
+        run: npm ci
+
+      - name: TypeCheck
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Link formatter
+        if: failure()
+        run: echo "Lint stage has fallen" && npx eslint . --fix
+
+      - name: Build
+        run: npm run build
