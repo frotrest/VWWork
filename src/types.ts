@@ -28,11 +28,11 @@ export interface Vacancy {
     netOrGross: 'нетто' | 'брутто';
   };
   employmentType:
-    'Повна зайнятість' | 'Змінний графік' | 'Сезонна робота' | 'Вахта';
+  'Повна зайнятість' | 'Змінний графік' | 'Сезонна робота' | 'Вахта';
   housingProvided: boolean;
   housingCost?: string;
   experienceRequired:
-    'Без досвіду' | 'Від 1 року' | 'Від 2 років' | 'Досвідчений фахівець';
+  'Без досвіду' | 'Від 1 року' | 'Від 2 років' | 'Досвідчений фахівець';
   languagesRequired: string[];
   description: string;
   responsibilities: string[];
@@ -134,6 +134,8 @@ export interface SocialLinkI {
   href: string;
   icon: IconType;
   label: string;
+  ariaLabel: string;
+  [key: string]: unknown;
 }
 
 export interface LegalLinkI {
@@ -237,5 +239,5 @@ export type ModifyType<
 > = Mode extends 'optional'
   ? Omit<T, K> & Partial<Pick<T, K>>
   : Mode extends 'readonly'
-    ? Omit<T, K> & Readonly<Pick<T, K>>
-    : Omit<T, K> & Required<Pick<T, K>>;
+  ? Omit<T, K> & Readonly<Pick<T, K>>
+  : Omit<T, K> & Required<Pick<T, K>>;

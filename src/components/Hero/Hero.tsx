@@ -61,7 +61,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-1.5 pt-3 border-t border-slate-100 mt-3 text-xs text-slate-500">
-              <span className="font-semibold text-slate-400">
+              <span className="font-semibold text-slate-700">
                 Швидкий вибір:
               </span>
               {[
