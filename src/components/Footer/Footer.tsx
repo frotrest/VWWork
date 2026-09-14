@@ -49,9 +49,24 @@ const Footer = ({ onOpenEmployerModal }: LayoutI) => {
   ];
 
   const socialLinks: SocialLinkI[] = [
-    { href: 'https://t.me', icon: LuSend, label: 'Telegram' },
-    { href: 'mailto:contact@vv-work.eu', icon: LuMail, label: 'Email' },
-    { href: 'tel:+380443900000', icon: LuPhone, label: 'Phone' },
+    {
+      href: 'https://t.me',
+      icon: LuSend,
+      label: 'Telegram',
+      ariaLabel: 'Написати нам у Telegram',
+    },
+    {
+      href: 'mailto:contact@vv-work.eu',
+      icon: LuMail,
+      label: 'Email',
+      ariaLabel: 'Надіслати електронного листа',
+    },
+    {
+      href: 'tel:+380443900000',
+      icon: LuPhone,
+      label: 'Phone',
+      ariaLabel: 'Зателефонувати нам',
+    },
   ];
 
   const legalLinks: LegalLinkI[] = [
@@ -98,6 +113,7 @@ const Footer = ({ onOpenEmployerModal }: LayoutI) => {
                     target={
                       social.href.startsWith('http') ? '_blank' : undefined
                     }
+                    aria-label={social.ariaLabel}
                     className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center transition-colors"
                   >
                     <IconComponent className="w-4 h-4" />
