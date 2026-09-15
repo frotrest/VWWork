@@ -28,6 +28,7 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      # Запускається лише якщо попередній крок (Lint) впав
       - name: Link formatter
         if: failure()
         run: echo "Lint stage has fallen" && npx eslint . --fix

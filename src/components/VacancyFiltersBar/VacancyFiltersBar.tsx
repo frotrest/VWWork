@@ -13,7 +13,7 @@ const VacancyFiltersBar: React.FC<VacancyFiltersBarProps> = ({
   return (
     <motion.div
       initial={{
-        x: -100,
+        x: -40,
         opacity: 0,
       }}
       whileInView={{ x: 0, opacity: 1 }}
@@ -33,6 +33,8 @@ const VacancyFiltersBar: React.FC<VacancyFiltersBarProps> = ({
               placeholder="Пошук за назвою посади..."
               className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-all bg-slate-50/50 focus:bg-white"
             />
+
+            {/* Кнопка очищення показується лише коли є введений текст */}
             {searchInput && (
               <button
                 onClick={() => setSearchInput('')}

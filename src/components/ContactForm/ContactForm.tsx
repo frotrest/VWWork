@@ -23,6 +23,9 @@ const ContactForm: React.FC = () => {
     message?: string;
   }>({});
 
+  // Проста стейт-машина статусу сабміту: idle -> optimistic_pending -> success | error
+  // optimistic_pending, а не просто isLoading — щоб явно розрізняти
+  // "чекаємо відповідь мок-API" від інших можливих майбутніх станів
   const [status, setStatus] = useState<
     'idle' | 'optimistic_pending' | 'success' | 'error'
   >('idle');
@@ -34,6 +37,10 @@ const ContactForm: React.FC = () => {
 
   const validate = (): boolean => {
     const newErrors: { name?: string; contact?: string; message?: string } = {};
+
+    // Контакт вважається валідним, якщо збігається хоча б з ОДНИМ форматом:
+    // телефон, email або Telegram-нікнейм — бо форма явно не вимагає
+    // конкретного каналу зв'язку, користувач обирає сам
 
     const trimmedName = name.trim();
     if (!trimmedName || trimmedName.length < 2) {

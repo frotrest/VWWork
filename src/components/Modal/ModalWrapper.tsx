@@ -15,6 +15,8 @@ const ModalWrapper = ({
   children,
   maxWidth = 'max-w-lg',
 }: ModalWrapperProps) => {
+  // Блокуємо скрол сторінки, поки модалка відкрита — інакше фоновий
+  // контент прокручується "крізь" оверлей
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -26,6 +28,7 @@ const ModalWrapper = ({
     };
   }, [isOpen]);
 
+  // Закриття по Escape — слухач вішається лише поки модалка відкрита,
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -40,6 +43,9 @@ const ModalWrapper = ({
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
+
+  // ВАЖЛИВО: без цієї перевірки компонент рендериться завжди
+  if (!isOpen) return null;
 
   const modalRoot = document.getElementById('modal-root');
   if (!modalRoot) return null;

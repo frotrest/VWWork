@@ -27,6 +27,8 @@ const faqs: FaqItem[] = [
 ];
 
 const FaqAccordion: React.FC = () => {
+  // Перший пункт відкритий за замовчуванням (0, а не null) — одразу
+  // показуємо користувачу, що це саме розгорткові елементи, а не просто список
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   return (

@@ -36,6 +36,7 @@ const VacancyDetailedCard: React.FC<VacancyCardProps> = ({
             <span className="text-[11px] font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-md border border-blue-100">
               {vacancy.category}
             </span>
+            {/* Значок Терміново відображається лише для вакансій, позначених як термінові */}
             {vacancy.urgent && (
               <span className="text-[11px] font-bold text-rose-700 bg-rose-50 px-2.5 py-0.5 rounded-md border border-rose-200">
                 Терміновий набір
@@ -49,7 +50,7 @@ const VacancyDetailedCard: React.FC<VacancyCardProps> = ({
           <h3 className="text-lg sm:text-xl font-black text-slate-950 tracking-tight">
             {vacancy.title}
           </h3>
-
+          {/* Коротка інформація: місцезнаходження, тип зайнятості, необхідний досвід */}
           <div className="flex flex-wrap items-center gap-4 text-xs text-slate-600 pt-0.5">
             <span className="flex items-center gap-1 font-semibold text-slate-700">
               <FaMapMarkerAlt className="w-3.5 h-3.5 text-slate-400" />
@@ -66,6 +67,7 @@ const VacancyDetailedCard: React.FC<VacancyCardProps> = ({
           </div>
         </div>
 
+        {/* Блок із інформацією про зарплату + кнопка «Подати заявку»; на мобільних пристроях відображається у вигляді рядка, на настільних комп’ютерах — у вигляді стовпця */}
         <div className="flex flex-row flex-wrap lg:flex-col items-center lg:items-end justify-between gap-3 pt-3 lg:pt-0 border-t lg:border-t-0 border-slate-100">
           <div className="text-left lg:text-right">
             <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
@@ -118,7 +120,6 @@ const VacancyDetailedCard: React.FC<VacancyCardProps> = ({
             ))}
           </ul>
         </div>
-
         <div className="space-y-1.5">
           <span className="font-bold uppercase tracking-wider text-slate-500 text-[10px]">
             Ми гарантуємо:

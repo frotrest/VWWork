@@ -28,7 +28,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
       className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm space-y-6"
     >
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
-        {/* Logo and Main Details */}
+        {/* Logo and основні деталі */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
           <img
             src={partner.logoUrl}
@@ -70,7 +70,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
           </div>
         </div>
 
-        {/* Total Hired Metric Box */}
+        {/* Загальна кількість найнятих працівників  */}
         <div className="bg-blue-50/70 border border-blue-100 rounded-2xl p-4 sm:p-5 text-center min-w-45 w-full md:w-auto">
           <div className="text-2xl sm:text-3xl font-black text-blue-700">
             {partner.totalHired}+
@@ -84,7 +84,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
         </div>
       </div>
 
-      {/* Description & Key Highlights */}
+      {/* Опис та основні особливості */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-4">
           <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">
@@ -94,7 +94,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
             {partner.description}
           </p>
 
-          {/* Highlights bullets */}
+          {/* Основні моменти (у вигляді списку) */}
           <div className="pt-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
               Умови та переваги роботи у роботодавця:
@@ -113,7 +113,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
           </div>
         </div>
 
-        {/* Contacts & Verification Card */}
+        {/* Контакти та картка підтвердження */}
         <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 space-y-4 h-fit">
           <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">
             Контакти відділу найму

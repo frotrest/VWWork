@@ -73,14 +73,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               ].map((tag) => (
                 <button
                   key={tag}
-                  onClick={() => {
-                    setHeroSearchQuery(tag === 'Житло безкоштовно' ? '' : tag);
-                    if (tag === 'Будівництво')
-                      setSelectedCategory('Будівництво');
-                    if (tag === 'Склад') setSelectedCategory('Логістика');
-                    if (tag === 'Водій CE') setSelectedCategory('Водії');
-                    onSearchClick();
-                  }}
+                  onClick={
+                    // "Житло безкоштовно" — не назва посади, тому в пошук не підставляємо,
+                    () => {
+                      setHeroSearchQuery(
+                        tag === 'Житло безкоштовно' ? '' : tag
+                      );
+                      // Частина тегів відповідає конкретній категорії вакансій — підставляємо її напряму
+                      if (tag === 'Будівництво')
+                        setSelectedCategory('Будівництво');
+                      if (tag === 'Склад') setSelectedCategory('Логістика');
+                      if (tag === 'Водій CE') setSelectedCategory('Водії');
+                      onSearchClick();
+                    }
+                  }
                   className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 hover:text-blue-600 text-slate-700 font-medium transition-colors cursor-pointer"
                 >
                   {tag}

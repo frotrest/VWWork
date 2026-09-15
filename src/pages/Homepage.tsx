@@ -20,6 +20,7 @@ const HomePage = () => {
   const [selectedCategory, setSelectedCategory] =
     useState<JobCategory>('Всі категорії');
 
+  // Партнери та вакансії завантажуються й обробляють помилки незалежно один від одного
   const [partners, setPartners] = useState<Partner[]>([]);
   const [isPartnersLoading, setIsPartnersLoading] = useState(true);
   const [partnersError, setPartnersError] = useState<string | null>(null);
@@ -30,6 +31,7 @@ const HomePage = () => {
   const [vacanciesError, setVacanciesError] = useState<string | null>(null);
   const [isRetryingVacancies, setIsRetryingVacancies] = useState(false);
 
+  // Дебаунс пошукового запиту
   const debouncedSearchQuery = useDebounce(heroSearchQuery, 300);
 
   const loadPartnersData = async () => {
@@ -69,12 +71,14 @@ const HomePage = () => {
   };
 
   useEffect(() => {
+    // це виносить обидва запити за межі синхронного рендеру ефекту
     Promise.resolve().then(() => {
       loadPartnersData();
       loadVacanciesData();
     });
   }, []);
 
+  // Локальна фільтрація вакансій на головній: за категорією і за пошуковим рядком
   const filteredHomeVacancies = vacancies.filter((v) => {
     const matchesCategory =
       selectedCategory === 'Всі категорії' || v.category === selectedCategory;

@@ -7,6 +7,8 @@ import type {
   ContactMessageData,
 } from '@app-types';
 
+// mock-data
+
 export const MOCK_PARTNERS: Partner[] = [
   {
     slug: 'nordic-logistics-as',
@@ -1028,6 +1030,8 @@ export const CATEGORIES_LIST: JobCategory[] = [
   'Сільське господарство',
   'Інші',
 ];
+
+// Функції для запитів
 
 export async function simulateApiFetch<T>(
   dataFetcher: () => T,

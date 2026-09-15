@@ -48,7 +48,7 @@ const offices: Office[] = [
 const ContactsPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-16 pb-24 ">
-      {/* Header Banner */}
+      {/* Header банер */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ const ContactsPage: React.FC = () => {
         </p>
       </motion.div>
 
-      {/* Offices List (Flexbox) */}
+      {/* Ліст оффісів (Flexbox) */}
       <section className="space-y-6">
         <motion.h2
           initial={{ opacity: 0, x: -100 }}
@@ -98,7 +98,7 @@ const ContactsPage: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* Interactive Form & Messengers */}
+      {/* Інтерактивна форма & Мессенджери */}
       <section className="flex flex-col lg:flex-row gap-8 items-start">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -187,7 +187,7 @@ const ContactsPage: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ секція */}
       <FaqAccordion />
     </div>
   );

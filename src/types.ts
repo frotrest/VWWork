@@ -232,6 +232,10 @@ export interface VacancyFiltersBarProps {
   partnerCategories: JobCategory[];
 }
 
+//  Утиліта для модифікації типу: робить поля з `K` опціональними, readonly або обов'язковими,
+//  залежно від `Mode`. Корисно, коли потрібен варіант існуючого типу з іншими вимогами до частини полів,
+//  без дублювання всього інтерфейсу.
+
 export type ModifyType<
   T extends object,
   K extends keyof T,
