@@ -126,6 +126,7 @@ const ApplicationModal = ({
         <button
           type="button"
           onClick={onClose}
+          aria-label="Закрити модалку"
           className="w-10 h-10 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 flex items-center justify-center transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
@@ -295,7 +296,7 @@ const ApplicationModal = ({
                   className="block text-xs font-bold text-slate-700 uppercase tracking-wider"
                 >
                   Повідомлення або коментар{' '}
-                  <span className="text-slate-400 font-normal lowercase">
+                  <span className="text-slate-600 font-normal lowercase">
                     (опційно)
                   </span>
                 </label>
@@ -303,7 +304,7 @@ const ApplicationModal = ({
                   className={`text-xs font-mono ${
                     message.length > 500
                       ? 'text-rose-600 font-bold'
-                      : 'text-slate-400'
+                      : 'text-slate-600'
                   }`}
                 >
                   {message.length} / 500

@@ -93,6 +93,7 @@ src/
 > ![Lighthouse Report Desktop](./src/docs/pagespeed-desktop.jpg)
 > ![Lighthouse Report Mobile](./src/docs/pagespeed-mobile.jpg)
 
+**Axe:** accessibility-перевірка пройшла без Critical, Serious та інших помилок.
 ---
 
 ## ✅ Якість коду та тестування

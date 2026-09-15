@@ -142,7 +142,7 @@ const EmployeePage: React.FC = () => {
           <span>Назад до всіх роботодавців</span>
         </button>
 
-        <div className="flex items-center gap-1.5 text-xs text-slate-400">
+        <div className="flex items-center gap-1.5 text-xs text-slate-700">
           <button
             onClick={() => navigate('/', { replace: true })}
             className="hover:underline"
