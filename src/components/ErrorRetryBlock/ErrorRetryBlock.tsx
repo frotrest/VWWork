@@ -2,6 +2,9 @@ import { FiAlertTriangle, FiRefreshCw } from 'react-icons/fi';
 import type { ErrorRetryBlockProps } from '@app-types';
 import { motion } from 'motion/react';
 
+// Переюзний блок помилки + retry, який рендериться на кожній сторінці
+// з асинхронними даними (Homepage, EmployeePage) замість skeleton/контенту,
+// коли simulateApiFetch кидає помилку (~20% запитів, див. services/api.ts)
 const ErrorRetryBlock = ({
   title = 'Не вдалося завантажити дані',
   message = 'Сталася помилка з’єднання або сервер тимчасово недоступний (модельована помилка API 1 з 5).',
@@ -27,6 +30,8 @@ const ErrorRetryBlock = ({
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
         <button
           type="button"
+          // Блокуємо кнопку на час повторного запиту, щоб користувач
+          // не міг наспамити кілька одночасних retry-запитів підряд
           onClick={onRetry}
           disabled={isRetrying}
           className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-sm bg-blue-600 text-white hover:bg-blue-700 active:scale-[0.98] transition-all shadow-sm disabled:opacity-70 disabled:pointer-events-none cursor-pointer"

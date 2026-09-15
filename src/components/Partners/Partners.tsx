@@ -71,7 +71,6 @@ const PartnersSection: React.FC<PartnersSectionProps> = ({
           }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.1 }}
-          exit={{ x: -100, opacity: 0 }}
           transition={{ duration: 0.8, ease: 'easeInOut' }}
           className="flex flex-wrap gap-6"
         >
@@ -118,7 +117,7 @@ const PartnersSection: React.FC<PartnersSectionProps> = ({
                 <p className="text-xs text-slate-600 mt-3 line-clamp-2 leading-relaxed">
                   {partner.tagline}
                 </p>
-
+                {/* Показуємо лише перші 2 highlights із повного списку */}
                 <div className="space-y-1.5 mt-4 pt-4 border-t border-slate-100">
                   {partner.highlights.slice(0, 2).map((item, idx) => (
                     <div

@@ -21,13 +21,13 @@ const EmployeePage: React.FC = () => {
     onSelectVacancyForApply: (vacancy?: Vacancy) => void;
   }>();
 
-  // Asynchronous Partner data
+  // Асинхронні дані про партнерів
   const [partner, setPartner] = useState<Partner | null>(null);
   const [isPartnerLoading, setIsPartnerLoading] = useState(true);
   const [partnerError, setPartnerError] = useState<string | null>(null);
   const [isRetryingPartner, setIsRetryingPartner] = useState(false);
 
-  // Asynchronous Vacancies data
+  // Дані про вакансії в режимі асинхронного оновлення
   const [vacancies, setVacancies] = useState<Vacancy[]>([]);
   const [isVacanciesLoading, setIsVacanciesLoading] = useState(true);
   const [vacanciesError, setVacanciesError] = useState<string | null>(null);
@@ -36,13 +36,13 @@ const EmployeePage: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
   const debouncedSearchQuery = useDebounce(searchInput, 350);
 
-  // Category filter state
+  // Стан фільтра за категоріями
   const [selectedCategory, setSelectedCategory] =
     useState<JobCategory>('Всі категорії');
 
   const navigate = useNavigate();
 
-  // Load Partner Profile
+  // Завантажити профіль партнера
   const loadPartner = async () => {
     if (!slug) return;
     setIsPartnerLoading(true);
@@ -66,7 +66,7 @@ const EmployeePage: React.FC = () => {
     }
   };
 
-  // Load Partner Vacancies
+  // Завантажити вакансії для партнерів
   const loadVacancies = async () => {
     if (!slug) return;
     setIsVacanciesLoading(true);
@@ -158,7 +158,7 @@ const EmployeePage: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* ================= PARTNER PROFILE HEADER ================= */}
+      {/* PARTNER PROFILE HEADER */}
       {isPartnerLoading ? (
         <PartnerHeaderSkeleton />
       ) : partnerError ? (
@@ -175,7 +175,7 @@ const EmployeePage: React.FC = () => {
         <EmployeeProfileHeader partner={partner} />
       ) : null}
 
-      {/* ================= VACANCY LIST & SIMULTANEOUS FILTERS ================= */}
+      {/* VACANCY LIST & ОДНОЧАСНІ ФІЛЬТРИ */}
       <section className="space-y-6">
         <motion.div
           initial={{
@@ -205,7 +205,7 @@ const EmployeePage: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Filter Controls Bar */}
+        {/* Фільтри */}
         <VacancyFiltersBar
           searchInput={searchInput}
           setSearchInput={setSearchInput}
@@ -214,7 +214,7 @@ const EmployeePage: React.FC = () => {
           partnerCategories={partnerCategories}
         />
 
-        {/* Vacancies Async List */}
+        {/* Асинхронний ліст вакансій */}
         {isVacanciesLoading ? (
           <div className="space-y-4">
             <VacancyCardSkeleton />

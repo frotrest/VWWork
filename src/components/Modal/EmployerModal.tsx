@@ -12,7 +12,7 @@ import type {
   EmployerInquiryData,
 } from '@app-types';
 import { submitEmployerInquiryApi } from '../../services/api';
-import ModalWrapper from './ModalWrapper'; // Вкажи свій актуальний шлях до обгортки
+import ModalWrapper from './ModalWrapper';
 
 const COUNTRIES = [
   'Польща',
@@ -63,6 +63,8 @@ const EmployerInquiryModal = ({
       positionsNeeded?: string;
     } = {};
 
+    // Той самий набір regex, що й у ContactForm/ApplicationModal — контакт
+    // валідний за будь-яким одним із трьох форматів (телефон/email/Telegram)
     if (!companyName.trim() || companyName.trim().length < 2) {
       newErrors.companyName = 'Вкажіть назву вашої компанії (мін. 2 символи)';
     }

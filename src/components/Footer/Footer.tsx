@@ -84,9 +84,9 @@ const Footer = ({ onOpenEmployerModal }: LayoutI) => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
-        {/* Main container using Flexbox */}
+        {/* Головний контейнер із використанням Flexbox */}
         <div className="flex flex-col lg:flex-row justify-between gap-10 pb-12 border-b border-slate-800">
-          {/* Col 1: Brand & Mission */}
+          {/* Колос. 1: Бренд і місія */}
           <div className="lg:w-2/5 space-y-4">
             <div className="flex items-center gap-2.5">
               <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold shadow-md">
@@ -123,7 +123,7 @@ const Footer = ({ onOpenEmployerModal }: LayoutI) => {
             </div>
           </div>
 
-          {/* Flex container for navigation and contacts columns */}
+          {/* Гнучкий контейнер для колонок навігації та контактів */}
           <div className="flex flex-wrap sm:flex-nowrap justify-between gap-8 lg:w-3/5">
             {/* Col 2: Для кандидатів */}
             <div className="space-y-3 w-full sm:w-auto">
@@ -213,7 +213,7 @@ const Footer = ({ onOpenEmployerModal }: LayoutI) => {
           </div>
         </div>
 
-        {/* Bottom copyright & legal */}
+        {/* Нижня частина сторінки: інформація про авторські права та юридичні питання */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {new Date().getFullYear()} VV Work EU Inc. Всі права захищено.

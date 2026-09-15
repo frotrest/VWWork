@@ -29,7 +29,7 @@ const ApplicationModal = ({
     message?: string;
   }>({});
 
-  // Submission lifecycle: idle | optimistic_pending | success | error
+  // Життєвий цикл запиту: idle | optimistic_pending | success | error
   const [status, setStatus] = useState<
     'idle' | 'optimistic_pending' | 'success' | 'error'
   >('idle');
@@ -39,7 +39,7 @@ const ApplicationModal = ({
   } | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Client validation
+  // Клієнтська валідація
   const validate = (): boolean => {
     const newErrors: { name?: string; contact?: string; message?: string } = {};
 
@@ -218,7 +218,7 @@ const ApplicationModal = ({
               </div>
             )}
 
-            {/* Full Name field */}
+            {/* Поле «Повне ім’я» */}
             <div className="space-y-1.5">
               <label
                 htmlFor="app-name"
@@ -287,7 +287,7 @@ const ApplicationModal = ({
               )}
             </div>
 
-            {/* Message / Cover notes */}
+            {/* Повідомлення */}
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">
                 <label
@@ -336,7 +336,7 @@ const ApplicationModal = ({
               )}
             </div>
 
-            {/* Submit CTA */}
+            {/* Submit форми */}
             <div className="pt-2">
               <button
                 type="submit"

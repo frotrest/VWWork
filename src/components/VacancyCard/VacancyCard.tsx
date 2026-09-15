@@ -9,7 +9,7 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy, onApply }) => {
   return (
     <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/90 shadow-xs hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between w-full h-full min-w-0">
       <div className="space-y-3 min-w-0">
-        {/* Category & Urgent badge */}
+        {/* Категорія та позначка Терміново */}
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <span className="text-[11px] font-bold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-lg">
             {vacancy.category}
@@ -21,12 +21,12 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy, onApply }) => {
           )}
         </div>
 
-        {/* Title */}
+        {/* Тайтл */}
         <h3 className="text-base font-black text-slate-900 line-clamp-2 hover:text-blue-600 transition-colors">
           {vacancy.title}
         </h3>
 
-        {/* Partner / Company & Location */}
+        {/* Партнер / Компанія & Локація */}
         <div className="flex items-center justify-between gap-2 text-xs text-slate-600 min-w-0">
           <button
             onClick={() =>
@@ -49,7 +49,7 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy, onApply }) => {
           </span>
         </div>
 
-        {/* Salary Highlight */}
+        {/* Інформація про зарплату */}
         <div className="p-3.5 rounded-2xl bg-blue-50/70 border border-blue-100 flex items-center justify-between gap-2">
           <div className="min-w-0">
             <span className="text-[10px] uppercase font-bold text-blue-800 tracking-wider block truncate">
@@ -72,7 +72,7 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy, onApply }) => {
           )}
         </div>
 
-        {/* Tags */}
+        {/* Теги */}
         <div className="flex flex-wrap gap-1.5 pt-1">
           <span className="text-[11px] text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">
             {vacancy.employmentType}
@@ -83,7 +83,7 @@ const VacancyCard: React.FC<VacancyCardProps> = ({ vacancy, onApply }) => {
         </div>
       </div>
 
-      {/* Card Actions */}
+      {/* Card івенти */}
       <div className="pt-5 mt-5 border-t border-slate-100 flex items-center gap-2">
         <button
           onClick={() => onApply(vacancy)}

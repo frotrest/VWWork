@@ -68,7 +68,7 @@ const Header = ({ onOpenEmployerModal, onOpenQuickApplyModal }: LayoutI) => {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop навігація */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navLinks.map((item, index) => {
               const isAnchor = item.path?.includes('#');
@@ -103,7 +103,7 @@ const Header = ({ onOpenEmployerModal, onOpenQuickApplyModal }: LayoutI) => {
             })}
           </nav>
 
-          {/* Desktop Right CTAs */}
+          {/* Desktop праворуч CTAs */}
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenEmployerModal}
@@ -127,7 +127,7 @@ const Header = ({ onOpenEmployerModal, onOpenQuickApplyModal }: LayoutI) => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Кнопка мобільного меню */}
           <div className="flex sm:hidden items-center gap-2">
             <button
               id="mobile-call-cta"
@@ -150,7 +150,7 @@ const Header = ({ onOpenEmployerModal, onOpenQuickApplyModal }: LayoutI) => {
         </div>
       </motion.div>
 
-      {/* Mobile Drawer */}
+      {/* Мобільне меню */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
