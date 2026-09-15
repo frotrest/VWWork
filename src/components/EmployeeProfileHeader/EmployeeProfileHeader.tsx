@@ -58,8 +58,8 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
                 <FaMapMarkerAlt className="w-4 h-4 text-slate-400" />
                 {partner.city}, {partner.country}
               </span>
-              <span className="flex items-center gap-1 text-amber-500 font-bold">
-                <FaStar className="w-4 h-4 fill-amber-400 text-amber-400" />
+              <span className="flex items-center gap-1 text-amber-700 font-bold">
+                <FaStar className="w-4 h-4 fill-amber-500 text-amber-500" />
                 {partner.rating} ({partner.reviewsCount} відгуків)
               </span>
               <span className="flex items-center gap-1 text-slate-500">
@@ -78,7 +78,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
           <div className="text-xs font-semibold text-blue-900 mt-0.5">
             Працевлаштовано українців
           </div>
-          <div className="text-[11px] text-blue-600/80 font-medium mt-1">
+          <div className="text-[11px] text-blue-700 font-medium mt-1">
             Офіційний контракт та віза
           </div>
         </div>
@@ -87,7 +87,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
       {/* Опис та основні особливості */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-4">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-slate-700">
             Про компанію
           </h3>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed">

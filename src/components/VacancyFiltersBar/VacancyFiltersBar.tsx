@@ -52,6 +52,7 @@ const VacancyFiltersBar: React.FC<VacancyFiltersBarProps> = ({
           </span>
           <select
             id="partner-category-select"
+            aria-label="Категорія вакансій"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value as JobCategory)}
             className="px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white text-slate-800 font-medium focus:outline-hidden focus:border-blue-600 focus:ring-2 focus:ring-blue-100 cursor-pointer w-full sm:w-auto"

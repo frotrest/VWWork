@@ -131,12 +131,14 @@ const Header = ({ onOpenEmployerModal, onOpenQuickApplyModal }: LayoutI) => {
           <div className="flex sm:hidden items-center gap-2">
             <button
               id="mobile-call-cta"
+              aria-label="Контакти"
               onClick={() => navigate('/contacts', { replace: true })}
               className="p-2.5 rounded-xl text-slate-600 bg-slate-100 hover:bg-slate-200 focus:outline-hidden"
             >
               <LuPhoneCall className="w-5 h-5" />
             </button>
             <button
+              aria-label="Мобільне меню"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2.5 rounded-xl text-slate-700 bg-slate-100 hover:bg-slate-200 focus:outline-hidden"
             >

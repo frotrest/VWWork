@@ -149,6 +149,7 @@ const EmployerInquiryModal = ({
         <button
           type="button"
           onClick={onClose}
+          aria-label="Закрити модалку"
           className="w-10 h-10 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 flex items-center justify-center transition-colors cursor-pointer"
         >
           <X className="w-5 h-5" />
@@ -300,6 +301,7 @@ const EmployerInquiryModal = ({
                 </label>
                 <select
                   value={country}
+                  aria-label="Виберіть категорію"
                   onChange={(e) => setCountry(e.target.value as Country)}
                   disabled={status === 'optimistic_pending'}
                   className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-hidden bg-white text-slate-900 cursor-pointer"
@@ -358,6 +360,7 @@ const EmployerInquiryModal = ({
                   min="1"
                   max="50"
                   step="1"
+                  aria-label="Кількість працівників"
                   value={workerCount}
                   onChange={(e) => setWorkerCount(Number(e.target.value))}
                   disabled={status === 'optimistic_pending'}
