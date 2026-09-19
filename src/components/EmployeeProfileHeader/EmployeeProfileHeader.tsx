@@ -33,7 +33,7 @@ const EmployeeProfileHeader: React.FC<EmployeeProfileHeaderProps> = ({
           <img
             src={partner.logoUrl}
             alt={partner.name}
-            referrerPolicy="no-referrer"
+            loading="lazy"
             className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border border-slate-100 shadow-xs shrink-0"
           />
           <div className="space-y-1.5">

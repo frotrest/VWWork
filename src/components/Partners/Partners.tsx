@@ -84,7 +84,7 @@ const PartnersSection: React.FC<PartnersSectionProps> = ({
                   <img
                     src={partner.logoUrl}
                     alt={partner.name}
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                     className="w-16 h-16 rounded-2xl object-cover border border-slate-100 shadow-2xs"
                   />
                   <div className="flex flex-col items-end gap-1">
