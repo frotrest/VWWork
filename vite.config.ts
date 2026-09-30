@@ -27,4 +27,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
   },
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 });

@@ -923,41 +923,7 @@ export const MOCK_VACANCIES: Vacancy[] = [
   },
 
   // TechNord Solutions
-  {
-    id: 'vac-tn-01',
-    partnerSlug: 'tech-nord-solutions',
-    partnerName: 'TechNord Engineering',
-    title: 'Сервісний технік промислових роботів (KUKA, ABB, Fanuc)',
-    category: 'IT',
-    country: 'Чехія',
-    city: 'Брно',
-    countryCode: 'CZ',
-    salary: {
-      amount: '2,500 – 3,300',
-      currency: 'EUR',
-      period: 'місяць',
-      netOrGross: 'нетто',
-    },
-    employmentType: 'Повна зайнятість',
-    housingProvided: true,
-    housingCost: 'Оплачується компанією на перші 6 місяців',
-    experienceRequired: 'Від 1 року',
-    languagesRequired: ['Українська', 'Англійська (технічна)'],
-    description:
-      'Пусконалагоджувальні роботи, калібрування та регулярний технічний аудит промислових маніпуляторів на автозаводах Skoda та Hyundai.',
-    responsibilities: [
-      'Калібрування траєкторій маніпуляторів',
-      'Діагностика контролерів та приводів',
-      'Усунення програмних збоїв на лінії',
-    ],
-    benefits: [
-      'Службовий автомобіль Skoda Octavia',
-      'Курси сертифікації виробників роботів',
-      'Медичний пакет',
-    ],
-    publishedAt: '3 дні тому',
-    urgent: true,
-  },
+
   {
     id: 'vac-tn-02',
     partnerSlug: 'tech-nord-solutions',
@@ -986,6 +952,35 @@ export const MOCK_VACANCIES: Vacancy[] = [
     ],
     benefits: ['Комфортний монтажний цех', 'Гнучкий графік роботи'],
     publishedAt: '4 дні тому',
+  },
+  {
+    id: 'vac-tn-03',
+    partnerSlug: 'tech-nord-solutions',
+    partnerName: 'TechNord Engineering',
+    title: 'Молодший інженер-програміст PLC (Siemens TIA Portal)',
+    category: 'IT',
+    country: 'Чехія',
+    city: 'Брно',
+    countryCode: 'CZ',
+    salary: {
+      amount: '2,600 – 3,400',
+      currency: 'EUR',
+      period: 'місяць',
+      netOrGross: 'нетто',
+    },
+    employmentType: 'Повна зайнятість',
+    housingProvided: true,
+    housingCost: 'Релокаційний бонус 1,000 €',
+    experienceRequired: 'Від 1 року',
+    languagesRequired: ['Українська', 'Англійська (B1)'],
+    description:
+      'Розробка програмного забезпечення для контролерів S7-1200 / S7-1500 та SCADA-систем WinCC.',
+    responsibilities: [
+      'Програмування на LAD/SCL',
+      'Тестування логіки на емуляторі',
+    ],
+    benefits: ['Офіс класу А+ у центрі Брно', '25 днів відпустки'],
+    publishedAt: '5 днів тому',
   },
   {
     id: 'vac-tn-03',
