@@ -36,6 +36,7 @@ npm run format
 
 - **React 19** + **TypeScript** (strict mode)
 - **Vite** — збірка та dev-сервер
+- **Docker** + **CI/CD**
 - **Tailwind CSS v4**
 - **React Router v7** — маршрутизація, спільний Layout через `useOutletContext`
 - **react-icons** — іконки
