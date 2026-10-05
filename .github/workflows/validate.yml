@@ -64,4 +64,8 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: frotrest/test-local:latest
+          tags: |
+            frotrest/test-local:latest 
+            frotrest/test-local:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

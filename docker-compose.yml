@@ -1,0 +1,7 @@
+services:
+  front:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports: 
+      - "8000:3000"
